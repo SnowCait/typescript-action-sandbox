@@ -96,9 +96,13 @@ function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             const ms = core.getInput('milliseconds');
-            const lines = core.getInput('lines');
+            const linesString = core.getInput('lines');
             core.debug(`Waiting ${ms} milliseconds ...`); // debug is only output if you set the secret `ACTIONS_RUNNER_DEBUG` to true
-            core.debug(`Lines: ${lines}`);
+            core.debug(`Lines: ${linesString}`);
+            const lines = linesString.split("\n");
+            for (let i = 0; i < lines.length; i++) {
+                core.debug(lines[i]);
+            }
             core.debug(new Date().toTimeString());
             yield wait_1.wait(parseInt(ms, 10));
             core.debug(new Date().toTimeString());

@@ -7,8 +7,8 @@ async function run(): Promise<void> {
     const linesString: string = core.getInput('lines')
     core.debug(`Waiting ${ms} milliseconds ...`) // debug is only output if you set the secret `ACTIONS_RUNNER_DEBUG` to true
     core.debug(`Lines: ${linesString}`)
-    
-    const lines = linesString.split("\n")
+
+    const lines = linesString.split('\n')
     for (let i = 0; i < lines.length; i++) {
       core.debug(lines[i])
     }
