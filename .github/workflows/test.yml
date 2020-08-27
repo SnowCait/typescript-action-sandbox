@@ -31,7 +31,6 @@ jobs:
           git config user.name SnowCait
           git add . && git diff --cached --exit-code --quiet || git commit -m "Update" && git push
   test: # make sure the action works on a clean machine without building
-    needs: [build]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
