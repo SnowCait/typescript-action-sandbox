@@ -11,6 +11,8 @@ async function run(): Promise<void> {
     const lines = linesString.split('\n')
     for (let i = 0; i < lines.length; i++) {
       core.debug(`${i}: ${__dirname}__${lines[i]}`)
+      core.debug(process.cwd())
+      core.debug(process.argv[1])
     }
 
     core.debug(new Date().toTimeString())
