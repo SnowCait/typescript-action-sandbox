@@ -101,7 +101,7 @@ function run() {
             core.debug(`Lines: ${linesString}`);
             const lines = linesString.split('\n');
             for (let i = 0; i < lines.length; i++) {
-                core.debug(`${i}: ${lines[i]}`);
+                core.debug(`${i}: ${__dirname}${lines[i]}`);
             }
             core.debug(new Date().toTimeString());
             yield wait_1.wait(parseInt(ms, 10));
