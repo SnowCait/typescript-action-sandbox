@@ -38,3 +38,6 @@ jobs:
       - uses: ./
         with:
           milliseconds: 1000
+          lines: |
+            a.png
+            b.png
