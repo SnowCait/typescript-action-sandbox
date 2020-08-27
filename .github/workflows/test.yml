@@ -17,10 +17,9 @@ jobs:
           npm run all
       - run: |
           git status
-          git add .
           git config user.email snowcait@example.com
           git config user.name SnowCait
-          git commit -m "Commit"
+          git add . && git diff --cached --exit-code --quiet || git commit -m "Commit"
   test: # make sure the action works on a clean machine without building
     runs-on: ubuntu-latest
     steps:
