@@ -10,7 +10,7 @@ async function run(): Promise<void> {
 
     const lines = linesString.split('\n')
     for (let i = 0; i < lines.length; i++) {
-      core.debug(`${i}: ${lines[i]}`)
+      core.debug(`${i}: ${__dirname}${lines[i]}`)
     }
 
     core.debug(new Date().toTimeString())
