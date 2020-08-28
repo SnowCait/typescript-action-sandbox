@@ -38,7 +38,7 @@ jobs:
       - uses: SnowCait/typescript-action-sandbox@main
         with:
           milliseconds: 1000
-          lines: |
-            a.png
-            b.png
+#           lines: |
+#             a.png
+#             b.png
       - run: pwd
